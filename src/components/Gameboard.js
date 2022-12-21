@@ -14,9 +14,9 @@ const initialiseArray = () => {
 };
 const cardArray = initialiseArray();
 
-const Gameboard = () => {
+const Gameboard = (props) => {
 	const [allCards, setAllCards] = useState(cardArray);
-	const [score, setScore] = useState(0);
+	const { score, setScore } = props;
 
 	const shuffleArray = (array) => {
 		for (let i = array.length - 1; i > 0; i--) {
@@ -35,13 +35,22 @@ const Gameboard = () => {
 		const cards = Array.from(document.getElementsByClassName("card"));
 		cards.forEach((element) => {
 			element.addEventListener("click", toggleElement);
-			//console.log(element);
 		});
 	}, []);
 
 	const shuffleCards = () => {
 		const shuffled = shuffleArray(allCards);
 		setAllCards([...shuffled]);
+	};
+
+	const resetValues = () => {
+		const array = allCards.slice();
+		const cards = Array.from(document.getElementsByClassName("card"));
+		cards.forEach((element) => {
+			array.find((card) => card.id === element.id).isClicked = false;
+		});
+		setAllCards([...array]);
+		shuffleCards();
 	};
 
 	const toggleElement = (e) => {
@@ -54,15 +63,13 @@ const Gameboard = () => {
 			setAllCards([...array]);
 			shuffleCards();
 		} else {
-			array.find((card) => card.id === id).isClicked = false;
 			setScore(0);
-			shuffleCards();
+			resetValues();
 		}
-		console.log(allCards);
 	};
 
 	return (
-		<div className="gameboard">
+		<div className="gameboard" id="board">
 			{allCards.map((card) => (
 				<Card
 					image={card.image}

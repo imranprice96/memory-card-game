@@ -11,6 +11,7 @@ div.App {
 	display: grid;
 	grid-template-rows: 1fr 1fr;
 	text-align: center;
+	font-size: 1.4rem;
 }
 
 .gameboard-container {
@@ -23,6 +24,10 @@ div.App {
 .rules {
 	background-color: #374151;
 	color: #ca8a04;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 1.2rem;
 }
 h1 {
 	color: #eab308;
