@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/memory-card-game/static/css/main.d82bbc13.css",
+    "main.js": "/memory-card-game/static/js/main.d9dd3b18.js",
+    "static/media/anivia.png": "/memory-card-game/static/media/anivia.a88eb8f1f290f2035023.png",
+    "static/media/shyvana.png": "/memory-card-game/static/media/shyvana.7e8de847171e4aa3c8ae.png",
+    "static/media/yasuo.png": "/memory-card-game/static/media/yasuo.f483111e825b7bbb1d4d.png",
+    "static/media/heimerdinger.png": "/memory-card-game/static/media/heimerdinger.c952834d5b67f49679cf.png",
+    "static/media/lulu.png": "/memory-card-game/static/media/lulu.2f1e84386ec814491e98.png",
+    "static/media/kindred.png": "/memory-card-game/static/media/kindred.3e441499ce5d33ec2bf0.png",
+    "static/media/kaisa.png": "/memory-card-game/static/media/kaisa.bfb7e7856a94153074ee.png",
+    "static/media/viego.png": "/memory-card-game/static/media/viego.39d3c8ba5e8752428328.png",
+    "static/media/veigar.png": "/memory-card-game/static/media/veigar.f6d9862ba7970756252c.png",
+    "static/media/tryndamere.png": "/memory-card-game/static/media/tryndamere.50ceaee21e852ff201a6.png",
+    "static/media/kayn.png": "/memory-card-game/static/media/kayn.f649a901b360225ca71f.png",
+    "static/media/garen.png": "/memory-card-game/static/media/garen.3be26f6beceeaa140b92.png",
+    "static/media/galio.png": "/memory-card-game/static/media/galio.543847c874cc065ed9c3.png",
+    "static/media/zed.png": "/memory-card-game/static/media/zed.c83f8693f313d744fef1.png",
+    "static/media/shen.png": "/memory-card-game/static/media/shen.c38ccebda56c0279affc.png",
+    "index.html": "/memory-card-game/index.html",
+    "main.d82bbc13.css.map": "/memory-card-game/static/css/main.d82bbc13.css.map",
+    "main.d9dd3b18.js.map": "/memory-card-game/static/js/main.d9dd3b18.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d82bbc13.css",
+    "static/js/main.d9dd3b18.js"
+  ]
+}
