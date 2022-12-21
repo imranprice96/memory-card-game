@@ -4,27 +4,40 @@ import images from "../images/images";
 import Card from "./card";
 import uniqid from "uniqid";
 
+const initialiseArray = () => {
+	const cards = [];
+	for (const i in images) {
+		let obj = { image: images[i], isClicked: false };
+		cards.push(obj);
+	}
+	return cards;
+};
+const cardArray = initialiseArray();
+
 const Gameboard = () => {
-	const initialiseArray = () => {
-		const cards = [];
-		for (const i in images) {
-			let obj = { image: images[i], isClicked: false };
-			cards.push(obj);
+	const [allCards, setAllCards] = useState(cardArray);
+
+	const shuffleArray = (array) => {
+		for (let i = array.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			const temp = array[i];
+			array[i] = array[j];
+			array[j] = temp;
 		}
-		console.log(cards);
-		return cards;
+		return array;
 	};
 
-	const [allCards, setAllCards] = useState(initialiseArray());
-
 	useEffect(() => {
-		const displayCards = () => {
-			for (const card in allCards) {
-				console.log(allCards[card]);
-				return <Card image={allCards[card].image} />;
-			}
-		};
+		const mountArray = shuffleArray(cardArray);
+		setAllCards([...mountArray]);
+
+		document.addEventListener("click", shuffleCards);
 	}, []);
+
+	const shuffleCards = () => {
+		const shuffled = shuffleArray(allCards);
+		setAllCards([...shuffled]);
+	};
 
 	return (
 		<div className="gameboard">

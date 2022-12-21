@@ -1,4 +1,10 @@
 img {
 	max-width: 100%;
 	height: auto;
+	transition: 100ms;
+	cursor: pointer;
+}
+
+img:hover {
+	transform: scale(1.1);
 }
