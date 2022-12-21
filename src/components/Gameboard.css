@@ -1,0 +1,13 @@
+.gameboard {
+	background-color: #4b5563;
+	width: 100%;
+	max-width: 1500px;
+	height: fit-content;
+
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: auto;
+	gap: 1rem;
+	padding: 2rem;
+	justify-content: center;
+}
